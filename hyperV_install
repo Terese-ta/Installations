@@ -1,0 +1,29 @@
+#hyperv to enable windows 10 Home edition get "VIRTUALIZATION" capabilities
+DATTE: DEC 14, 2021
+Author: Terez Akuma
+Install hyperV using link: Download Enable Hyper V batch file  : https://bit.ly/3veO7cZ
+Download will Enable Hyper V.bat 317 B
+Restart computer
+minikube start
+
+OUTPUT
+
+ minikube start
+* minikube v1.24.0 on Microsoft Windows 10 Home 10.0.19043 Build 19043
+* Automatically selected the docker driver
+* Starting control plane node minikube in cluster minikube
+* Pulling base image ...
+* Downloading Kubernetes v1.22.3 preload ...
+    > gcr.io/k8s-minikube/kicbase: 355.78 MiB / 355.78 MiB  100.00% 2.29 MiB p/
+    > preloaded-images-k8s-v13-v1...: 501.73 MiB / 501.73 MiB  100.00% 2.63 MiB
+* Creating docker container (CPUs=2, Memory=2200MB) ...
+* Preparing Kubernetes v1.22.3 on Docker 20.10.8 ...
+  - Generating certificates and keys ...
+  - Booting up control plane ...
+  - Configuring RBAC rules ...
+* Verifying Kubernetes components...
+! Executing "docker container inspect minikube --format={{.State.Status}}" took an unusually long time: 2.573998s
+  - Using image gcr.io/k8s-minikube/storage-provisioner:v5
+* Restarting the docker service may improve performance.
+* Enabled addons: storage-provisioner, default-storageclass
+* Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
