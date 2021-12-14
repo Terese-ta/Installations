@@ -1,0 +1,15 @@
+#Install kubectl binary with curl on Windows
+Download the llatest release v1.23.0 here: https://dl.k8s.io/release/v1.23.0/bin/windows/amd64/kubectl.exe
+ate a folder in c:drive under user
+Add the binary in to your PATH (user, not system variables)
+Test to ensure the version of kubectl is the same as downloaded: kubectl version --client
+DONE!!
+
+OR
+
+If u have curl installed, use command:
+curl -LO "https://dl.k8s.io/release/v1.23.0/bin/windows/amd64/kubectl.exe"
+
+Kubectl comew with Docker Desktop:
+Note: Docker Desktop for Windows adds its own version of kubectl to PATH. If you have installed Docker Desktop before, 
+you may need to place your PATH entry before the one added by the Docker Desktop installer or remove the Docker Desktop's kubectl.
