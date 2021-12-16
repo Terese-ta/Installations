@@ -1,5 +1,7 @@
 # Trivy is an open source docker image scanning tool
 
+https://aquasecurity.github.io/trivy/v0.18.3/installation/
+
 Add repository to /etc/apt/sources.list.d.
 
 
