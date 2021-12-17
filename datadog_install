@@ -1,0 +1,17 @@
+#Install Datadog Agent on UBUNTU OS
+sudo apt-get update
+sudo apt-get install apt-transport-https curl gnupg
+sudo sh -c "echo 'deb [signed-by=/usr/share/keyrings/datadog-archive-keyring.gpg] https://apt.datadoghq.com/ stable 7' > /etc/apt/sources.list.d/datadog.list"
+sudo touch /usr/share/keyrings/datadog-archive-keyring.gpg
+sudo chmod a+r /usr/share/keyrings/datadog-archive-keyring.gpg
+curl https://keys.datadoghq.com/DATADOG_APT_KEY_CURRENT.public | sudo gpg --no-default-keyring --keyring /usr/share/keyrings/datadog-archive-keyring.gpg --import --batch
+curl https://keys.datadoghq.com/DATADOG_APT_KEY_382E94DE.public | sudo gpg --no-default-keyring --keyring /usr/share/keyrings/datadog-archive-keyring.gpg --import --batch
+curl https://keys.datadoghq.com/DATADOG_APT_KEY_F14F620E.public | sudo gpg --no-default-keyring --keyring /usr/share/keyrings/datadog-archive-keyring.gpg --import --batch
+#for ubuntu 14 and earlier#   sudo cp -a /usr/share/keyrings/datadog-archive-keyring.gpg /etc/apt/trusted.gpg.d/
+sudo apt-get update
+sudo apt-get install datadog-agent datadog-signing-keys
+sudo sh -c "sed -i 's/# site:.*/site: datadoghq.com/' /etc/datadog-agent/datadog.yaml.example"
+sudo initctl start datadog-agent
+sudo initctl start datadog-agent # start agent with ubuntu 14.04
+cat /etc/init.d/datadog-agent
+ls /etc/datadog-agent/
