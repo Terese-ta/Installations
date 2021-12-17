@@ -2,7 +2,7 @@ OS: UBUNTU/DEBIAN
 
 # Trivy is an open source docker image scanning tool
 
-Website for OTHER Installation: https://aquasecurity.github.io/trivy/v0.18.3/installation/
+Website for OTHER Installation: https://aquasecurity.github.io/trivy/v0.18.3/installation/  OTHERS - WhiteSource: https://www.whitesourcesoftware.com/
 
 Add repository to /etc/apt/sources.list.d.
 
